@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+    <ul id="uls"></ul>
+</div>
+        <script>
+            var uls=document.getElementById('uls');
+            function  getHtmlByString(len){
+                    var html ="";
+                    for(var i=0;i<len;i++){
+                        html+="<li></li>";
+                    }
+                    return html;
+                }
+               //aa(20);
+               function getHtmlByLoop(len) {
+                   var arr = [];
+                   for (var i = 0; i < len; i++) {
+                       arr.push("<li></li>");
+                   }
+                  return arr.join("");
+               }
+        // document.write(getHtmlByLoop(6));
+
+              function getHtmlByArray(len) {
+                   return new Array(len + 1).join("<li>11</li>");
+               }
+            document.write(getHtmlByArray(6));
+              /* var t1, t2, t3, t4, str1, str2, str3;
+               t1 = new Date();
+               str1 = getHtmlByString(1000);
+               t2 = new Date();
+               str2 = getHtmlByLoop(1000);
+               t3 = new Date();
+               str3 = getHtmlByArray(1000);
+               t4 = new Date();
+               console.log("str1 === s\btr2 -> " + (str1 == str2));
+               console.log("str2 === str3 -> " + (str2 == str3));
+               console.log("t2 - t1 = " + (t2 - t1),"\nt3 - t2 = " + (t3 - t2),"\nt4 - t3 = " + (t4 - t3));*/
+        </script>
+</body>
+</html>
